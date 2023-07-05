@@ -13,6 +13,7 @@ add_definitions(-DLIBEEP_VERSION_PATCH=${LIBEEP_VERSION_PATCH})
 if(WIN32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
   add_definitions(-DNOMINMAX)
+  add_definitions(-D_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING)
 endif(WIN32)
 
 set(Eep_sources
@@ -39,6 +40,9 @@ set(Eep_sources
 include_directories(libeep-3.3.177/src)
 
 add_executable(libeep_cnt_to_csv
-  main.c
+  main.cpp
   ${Eep_sources}
 )
+
+set_property(TARGET libeep_cnt_to_csv PROPERTY CXX_STANDARD 17)
+set_property(TARGET libeep_cnt_to_csv PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
