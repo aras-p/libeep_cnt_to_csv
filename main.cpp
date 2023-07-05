@@ -13,7 +13,7 @@ static std::string getPath(const std::filesystem::path& path)
 	std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> converter;
 	return converter.to_bytes(path);
 #else
-	return file.path();
+	return path.c_str();
 #endif
 }
 
