@@ -17,4 +17,4 @@ That's it!
 
 I only checked the build on Windows (Visual Studio 2022) and Mac (clang 14). In theory any C++17 compiler should do.
 
-The embedded `libeep-3.3.177` source is from the SourceForge page above. License of that is GPLv3.
+The embedded `libeep-3.3.177` source is from the [SourceForge page](https://sourceforge.net/projects/libeep/) above. License of that is GPLv3, and the original authors are: Max-Planck Institute of Cognitive Neuroscience, Germany; ANT Software BV, The Netherlands; eemagine Medical Imaging Solutions GmbH, Germany; Radboud University, Nijmegen, The Netherlands; Philipps-Universität Marburg, Germany.
